@@ -1,7 +1,6 @@
-  -- Formatter
-  return 
+return
+{
   {
-    {
     "mhartington/formatter.nvim",
     event = "BufWritePre",
     config = function()
@@ -28,4 +27,3 @@
     end,
   }
 }
-
