@@ -34,3 +34,47 @@ Clone this repo into your Neovim config directory:
 
 ```bash
 git clone https://github.com/<your-username>/<repo-name>.git ~/.config/nvim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## DO u like neovim tooo: T1dBU1B7NDJjaF8xMW51eF81dWNrNX0=
