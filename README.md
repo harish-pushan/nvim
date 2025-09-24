@@ -33,8 +33,8 @@ Make sure you have the following installed:
 Clone this repo into your Neovim config directory:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git ~/.config/nvim
-
+git clone https://github.com/harish-pushan/nvim.git ~/.config/nvim
+```
 
 
 
