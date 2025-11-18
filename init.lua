@@ -7,6 +7,7 @@ vim.g.mapleader= " "
 -- core keybindings 
 vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Save current file' })
 vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'exit current file' })
+vim.keymap.set('n', '<leader>ea', ':Explore<CR>', { desc = 'Treesitter' })
 
 -- Lazy config 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
