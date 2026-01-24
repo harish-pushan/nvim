@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "Comment.nvim": {
+      "rev": "e30b7f2008e52442154b66f7c519bfd2f1e32acb",
+      "src": "https://github.com/numToStr/Comment.nvim.git"
+    },
     "kanso.nvim": {
       "rev": "927361caec8c32e210acd5c56045e0d7d80143a0",
       "src": "https://github.com/webhooked/kanso.nvim"

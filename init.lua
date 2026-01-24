@@ -23,15 +23,21 @@ vim.pack.add({
 	{ src = "https://github.com/neovim/nvim-lspconfig.git" },
 	{ src = "https://github.com/williamboman/mason.nvim" },
 	{ src = "https://github.com/williamboman/mason-lspconfig.nvim" },
+	{ src = "https://github.com/numToStr/Comment.nvim.git" },
+
 })
+
+
+-- Commen.nvim --
+require('Comment').setup()
 
 -- LSP servers --
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "pyright", "bashls" }, -- auto install servers you want
+	ensure_installed = { "lua_ls", "pyright", "bashls","ts_ls"}, -- auto install servers you want
 	automatic_installation = true,
 })
-vim.lsp.enable({ "lua_ls", "pyright", "bashls" })
+vim.lsp.enable({ "lua_ls", "pyright", "bashls", "ts_ls" })
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 
 -- AutoComplete --
