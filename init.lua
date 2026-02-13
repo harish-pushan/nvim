@@ -24,17 +24,37 @@ vim.pack.add({
 	{ src = "https://github.com/williamboman/mason.nvim" },
 	{ src = "https://github.com/williamboman/mason-lspconfig.nvim" },
 	{ src = "https://github.com/numToStr/Comment.nvim.git" },
+	{ src = "https://github.com/ThePrimeagen/harpoon.git" },
+	-- dependency for harpoon --
+	{ src = "https://github.com/nvim-lua/plenary.nvim" },
 
 })
 
+-- Harpoon.nvim --
+local harpoon = require("harpoon")
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+harpoon.setup({})
 
--- Commen.nvim --
-require('Comment').setup()
+-- Harpoon.keymaps --
+vim.keymap.set("n", "<A-a>", mark.add_file, { desc = "Harpoon add file" })
+vim.keymap.set("n", "<A-e>", ui.toggle_quick_menu, { desc = "Harpoon menu" })
+
+vim.keymap.set("n", "<A-1>", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<A-2>", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<A-3>", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<A-4>", function() ui.nav_file(4) end)
+
+
+--Commen.nvim --
+require("Comment").setup()
+vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
+vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
 
 -- LSP servers --
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "pyright", "bashls","ts_ls"}, -- auto install servers you want
+	ensure_installed = { "lua_ls", "pyright", "bashls", "ts_ls" }, -- auto install servers you want
 	automatic_installation = true,
 })
 vim.lsp.enable({ "lua_ls", "pyright", "bashls", "ts_ls" })
